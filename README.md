@@ -1,5 +1,5 @@
 # beaconinside
-This repo will contain all the tests
+This repo will contain answers to all tasks
 
 # caesarcipher (task 1)
 working solution ready
