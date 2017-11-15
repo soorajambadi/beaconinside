@@ -1,12 +1,11 @@
 # beaconinside
 This repo will contain all the tests
-# Find21 (test 3)
-A working solution using recursion (DFS)
 
-Need to do: 
+# caesarcipher (task 1)
+working solution ready
 
-1. Random matrix
+# Find21 (task 3)
+working solution using recursion (DFS)
 
-2. Commenting the code
-
-3. More testing and documenting
+# Find21Short (task 3 bonus)
+working solution using recursion (DFS)
