@@ -21,13 +21,13 @@ public class Find21 {
 			for (int j=0;j<5;j++) {
 				List<Node> ndList = new ArrayList<Node>();  
 				if (!f21.found) {
-					f21.bfsFor21(i, j, 0, ndList, f21);
+					f21.dfsFor21(i, j, 0, ndList, f21);
 				}
 			}
 		}
 	}
 
-	public boolean bfsFor21(int i, int j, int sum, List<Node> parant, Find21 f21) {
+	public boolean dfsFor21(int i, int j, int sum, List<Node> parant, Find21 f21) {
 		sum = sum+f21.m[i][j];
 		if (sum == 21) {
 			System.out.println(f21.m[i][j] + " (" + i + "/" + j + ") ");
@@ -42,7 +42,7 @@ public class Find21 {
 				List<Node> parantL = new ArrayList(parant);
 				int sumL = sum;
 				//System.out.print(" . " + f21.m[i][j]);
-				boolean rtn = bfsFor21(i+1, j, sumL, parantL, f21);
+				boolean rtn = dfsFor21(i+1, j, sumL, parantL, f21);
 				if (rtn) {
 					System.out.println(f21.m[i][j] + " (" + i + "/" + j + ") ");
 					return true;
@@ -55,7 +55,7 @@ public class Find21 {
 				List<Node> parantL = new ArrayList(parant);
 				int sumL = sum;
 				//System.out.print(" , " + f21.m[i][j]);
-				boolean rtn = bfsFor21(i-1, j, sumL, parantL, f21);
+				boolean rtn = dfsFor21(i-1, j, sumL, parantL, f21);
 				if (rtn) {
 					System.out.println(f21.m[i][j] + " (" + i + "/" + j + ") ");
 					return true;
@@ -68,7 +68,7 @@ public class Find21 {
 				List<Node> parantL = new ArrayList(parant);
 				int sumL = sum;
 				//System.out.print(" + " + f21.m[i][j]);
-				boolean rtn = bfsFor21(i, j+1, sumL, parantL, f21);
+				boolean rtn = dfsFor21(i, j+1, sumL, parantL, f21);
 				if (rtn) {
 					System.out.println(f21.m[i][j] + " (" + i + "/" + j + ") ");
 					return true;
@@ -81,7 +81,7 @@ public class Find21 {
 				List<Node> parantL = new ArrayList(parant);
 				int sumL = sum;
 				//System.out.print(" - " + f21.m[i][j]);
-				boolean rtn = bfsFor21(i, j-1, sumL, parantL, f21);
+				boolean rtn = dfsFor21(i, j-1, sumL, parantL, f21);
 				if (rtn) {
 					System.out.println(f21.m[i][j] + " (" + i + "/" + j + ") ");
 					return true;
