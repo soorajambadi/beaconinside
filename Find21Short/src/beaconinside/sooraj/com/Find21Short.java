@@ -69,28 +69,28 @@ public class Find21Short {
 			parent.add(n);
 			
 			// recurse through right neighbor
-			if (checkChild(parent, i+1, j)) {
+			if (checkChild(parent, i+1, j, f21)) {
 				List<Node> parantL = new ArrayList<Node>(parent);
 				int sumL = sum;
 				dfsFor21(i+1, j, sumL, parantL, f21);
 			}
 			
 			// recurse through left neighbor
-			if (checkChild(parent, i-1, j)) {
+			if (checkChild(parent, i-1, j, f21)) {
 				List<Node> parantL = new ArrayList<Node>(parent);
 				int sumL = sum;
 				dfsFor21(i-1, j, sumL, parantL, f21);
 			}
 			
 			// recurse through top neighbor
-			if (checkChild(parent, i, j+1)) {
+			if (checkChild(parent, i, j+1, f21)) {
 				List<Node> parantL = new ArrayList<Node>(parent);
 				int sumL = sum;
 				dfsFor21(i, j+1, sumL, parantL, f21);
 			}
 			
 			// recurse through bottom neighbor
-			if (checkChild(parent, i, j-1)) {
+			if (checkChild(parent, i, j-1, f21)) {
 				List<Node> parantL = new ArrayList<Node>(parent);
 				int sumL = sum;
 				dfsFor21(i, j-1, sumL, parantL, f21);
@@ -117,15 +117,16 @@ public class Find21Short {
 	 * @param parant list of already parsed elements
 	 * @param i row index
 	 * @param j column index
+	 * @param f21 object instance
 	 * @return true if not exists in the list and is a valid index 
 	 */
-	public boolean checkChild(List<Node> parant, int i, int j) {
+	public boolean checkChild(List<Node> parant, int i, int j, Find21Short f21) {
 		for(Node n: parant) {
 			if ((n.r == i) && (n.c == j)) {
 				return false;
 			}
 		}
-		if (i<0 || i>4 || j<0 || j>4) {
+		if (i<0 || i>f21.row-1 || j<0 || j>f21.col-1) {
 			return false;
 		}
 		return true;
