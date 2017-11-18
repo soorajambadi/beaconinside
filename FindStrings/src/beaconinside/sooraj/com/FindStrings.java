@@ -12,15 +12,15 @@ public class FindStrings {
 		
 		// there should be only one argument
 		if (args.length != 1) {
-	      	System.out.println("Please provide an input number");
-	      	System.exit(1);
-	    }
+			System.out.println("Please provide an input number");
+			System.exit(1);
+		}
 		
 		String s = args[0];
 		// check input string for correctness
 		if (!s.matches("^[1-9]+$")) {
 			System.out.println("Please provide a valid input number, numbers in the range [1-9]");
-	      	System.exit(2);
+			System.exit(2);
 		}
 		FindStrings fs = new FindStrings();
 		List<Integer> sub = new ArrayList<Integer>();
