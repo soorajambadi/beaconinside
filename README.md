@@ -2,10 +2,13 @@
 This repo will contain answers to all tasks
 
 # caesarcipher (task 1)
-working solution ready
+working solution
+
+# FindStrings
+working solution using recursion
 
 # Find21 (task 3)
-working solution using recursion (DFS)
+working solution using recursion
 
 # Find21Short (task 3 bonus)
-working solution using recursion (DFS)
+working solution using recursion
