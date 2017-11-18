@@ -4,7 +4,7 @@ This repo will contain answers to all tasks
 # caesarcipher (task 1)
 working solution
 
-# FindStrings
+# FindStrings (task 2)
 working solution using recursion
 
 # Find21 (task 3)
