@@ -55,7 +55,7 @@ public class FindStrings {
 			if (i < s.length()-1) {
 				int offset =  Integer.parseInt(s.substring(i, i+2));
 				if (offset < 1 || offset > 26) {
-	                return;
+					return;
 	        	}
 				sub2.add(offset);
 				findSubString(s, sub2, i+2);
